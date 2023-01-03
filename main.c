@@ -6,7 +6,7 @@ int main(void) {
 
     printf("The Elevator travels between five floors.\n");
     printf("\n");
-    printf("To go the Ground floor press G. \nTo go to the 1st floor press 1. \nTo go to the 2nd floor press 2. \nTo go to the 3rd floor press 3. \nTo go to the 4th floor press 4. \nTo go to the 5th floor press 5. \nTo get off the lift press 6. \n");
+    printf("To go the Ground floor press G. \nTo go to the 1st floor press 1. \nTo go to the 2nd floor press 2. \nTo go to the 3rd floor press 3. \nTo go to the 4th floor press 4. \nTo go to the 5th floor press 5. \nTo get off the lift press Q. \n");
     printf("\n");
     printf("You're now on the Ground floor. What floor do you want to go to? \n");
 
@@ -37,7 +37,7 @@ int main(void) {
                 printf("You're now on the 5th floor. What floor do you want to go next? \n");
                 break;
 
-                case '6':
+                case 'Q':
                 printf("Getting off the lift...\n");
                 return 0;
                 break;
