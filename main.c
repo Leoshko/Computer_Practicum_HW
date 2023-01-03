@@ -1,41 +1,45 @@
 #include<stdio.h>
 
-void main() {
+int main(void) {
 
-    int G = 0;  // G - ground floor
-    int floor;
+    char floor;
 
     printf("The Elevator travels between five floors.\n");
     printf("\n");
-    printf("To go the Ground floor press 0. \nTo go to the 1st floor press 1. \nTo go to the 2nd floor press 2. \nTo go to the 3rd floor press 3. \nTo go to the 4th floor press 4. \nTo go to the 5th floor press 5. \n");
+    printf("To go the Ground floor press G. \nTo go to the 1st floor press 1. \nTo go to the 2nd floor press 2. \nTo go to the 3rd floor press 3. \nTo go to the 4th floor press 4. \nTo go to the 5th floor press 5. \nTo get off the lift press 6. \n");
     printf("\n");
     printf("You're now on the Ground floor. What floor do you want to go to? \n");
 
     while (1) {
-        scanf("%i", &floor);
+        scanf("%s", &floor);
             switch(floor) {
-                case 0:
+                case 'G':
                 printf("You're now on the Ground floor. What floor do you want to go next? \n");
                 break;
 
-                case 1:
+                case '1':
                 printf("You're now on the 1st floor. What floor do you want to go next? \n");
                 break;
 
-                case 2:
+                case '2':
                 printf("You're now on the 2nd floor. What floor do you want to go next? \n");
                 break;
 
-                case 3:
+                case '3':
                 printf("You're now on the 3d floor. What floor do you want to go next? \n");
                 break;
 
-                case 4:
+                case '4':
                 printf("You're now on the 4th floor. What floor do you want to go next? \n");
                 break;
 
-                case 5:
+                case '5':
                 printf("You're now on the 5th floor. What floor do you want to go next? \n");
+                break;
+
+                case '6':
+                printf("Getting off the lift...\n");
+                return 0;
                 break;
 
                 default:
