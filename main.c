@@ -1,55 +1,38 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+
+int travel_between_floors(void) {
+  char floor[10];
+  while(1) {
+    scanf("%s", &floor);
+    if (strcmp(floor, "B1") == 0) { 
+        printf("You're now in the Basement 1. What floor do you want to go next? \n");
+    } else if (strcmp(floor, "B2") == 0) { 
+        printf("You're now in the Basement 2. What floor do you want to go next? \n");
+    } else if (strcmp(floor, "B3") == 0) {  
+        printf("You're now in the Basement 3. What floor do you want to go next? \n");
+    } else if (strcmp(floor, "1")  == 0 || strcmp(floor, "2")  == 0 || strcmp(floor, "3")  == 0 || strcmp(floor, "4")  == 0 || strcmp(floor, "5") == 0) {
+      printf("You're now on the floor %s. What floor do you want to go next? \n", floor);
+    } else if (strcmp(floor, "G") == 0) {
+      printf("You're now on the Ground floor. What floor do you want to go next? \n");
+    } else if (strcmp(floor, "Q")  == 0) {
+      printf("Getting off the lift... \n");
+      return 0;
+    }
+    else {
+        printf("Please, enter a vaild value: \n");
+    }
+    }
+}
+
 
 int main(void) {
 
-    char floor;
+  printf("The Elevator travels between floors from B1 to B3 and from Ground to 5th.\n");
+  printf("\n");
+  printf("To travel between basement floors press B1, B2 or B3. \nTo travel between regular floors press G, 1, 2, 3, 4 or 5. \nTo get off the lift press Q. \n");
+  printf("\n");
+  printf("You're now on the Ground floor. What floor do you want to go to? \n");
 
-    printf("The Elevator travels between five floors.\n");
-    printf("\n");
-    printf("To go the Ground floor press G. \nTo go to the 1st floor press 1. \nTo go to the 2nd floor press 2. \nTo go to the 3rd floor press 3. \nTo go to the 4th floor press 4. \nTo go to the 5th floor press 5. \nTo get off the lift press Q. \n");
-    printf("\n");
-    printf("You're now on the Ground floor. What floor do you want to go to? \n");
-
-    while (1) {
-        scanf("%s", &floor);
-            switch(floor) {
-                case 'G':
-                printf("You're now on the Ground floor. What floor do you want to go next? \n");
-                break;
-
-                case '1':
-                printf("You're now on the 1st floor. What floor do you want to go next? \n");
-                break;
-
-                case '2':
-                printf("You're now on the 2nd floor. What floor do you want to go next? \n");
-                break;
-
-                case '3':
-                printf("You're now on the 3d floor. What floor do you want to go next? \n");
-                break;
-
-                case '4':
-                printf("You're now on the 4th floor. What floor do you want to go next? \n");
-                break;
-
-                case '5':
-                printf("You're now on the 5th floor. What floor do you want to go next? \n");
-                break;
-
-                case 'Q':
-                printf("Getting off the lift...\n");
-                return 0;
-                break;
-
-                default:
-                printf("Please, enter a vaild value: \n");
-                break;
-                
-            }
-    
-    }
-    
-
-
+  travel_between_floors();  
 }
