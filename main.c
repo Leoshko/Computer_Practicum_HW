@@ -5,14 +5,9 @@ int travel_between_floors(void) {
   char floor[10];
   while(1) {
     scanf("%s", &floor);
-    if (strcmp(floor, "B1") == 0) { 
-        printf("You're now in the Basement 1. What floor do you want to go next? \n");
-    } else if (strcmp(floor, "B2") == 0) { 
-        printf("You're now in the Basement 2. What floor do you want to go next? \n");
-    } else if (strcmp(floor, "B3") == 0) {  
-        printf("You're now in the Basement 3. What floor do you want to go next? \n");
-    } else if (strcmp(floor, "1")  == 0 || strcmp(floor, "2")  == 0 || strcmp(floor, "3")  == 0 || strcmp(floor, "4")  == 0 || strcmp(floor, "5") == 0) {
-      printf("You're now on the floor %s. What floor do you want to go next? \n", floor);
+    if (strcmp(floor, "B1") == 0 || strcmp(floor, "B2") == 0 || strcmp(floor, "B3") == 0 || strcmp(floor, "1")  == 0 
+     || strcmp(floor, "2")  == 0 || strcmp(floor, "3")  == 0 || strcmp(floor, "4")  == 0 || strcmp(floor, "5") == 0) { 
+       printf("You're now on the floor %s. What floor do you want to go next? \n", floor);
     } else if (strcmp(floor, "G") == 0) {
       printf("You're now on the Ground floor. What floor do you want to go next? \n");
     } else if (strcmp(floor, "Q")  == 0) {
