@@ -31,7 +31,7 @@ int main () {
             if (guesses[i]) {
                 printf("%c", guesses[i]);
             } else {
-                printf("_");  
+                printf("_ ");  
             }
         }
 
